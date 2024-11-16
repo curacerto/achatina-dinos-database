@@ -60,7 +60,10 @@ VALUES (001, 'T_REX', 3),
        (047, 'PLESIOSAURUS', 3),
        (048, 'HESPERORNIS', 3),
        (049, 'MANTIS', 3),
-       (050, 'BARYONIX', 2);
+       (050, 'BARYONIX', 2),
+       (051, 'SHASTASAURUS', 5),
+       (052, 'CERATOSAURUS', 4),
+       (053, 'DREADMERE', 6);
 UNLOCK
     TABLES;
 
@@ -129,6 +132,7 @@ CREATE TABLE `stat_category`
     `id`         int         NOT NULL AUTO_INCREMENT,
     `name`       varchar(40) NOT NULL,
     `multiplier` integer     NOT NULL,
+    `base_price` integer     NOT NULL,
     PRIMARY KEY (`id`)
 );
 
@@ -136,11 +140,12 @@ LOCK
     TABLES `stat_category` WRITE;
 
 INSERT INTO `stat_category`
-VALUES (001, 'EASY', 1),
-       (002, 'SIMPLE', 2),
-       (003, 'MODERATE', 3),
-       (004, 'CHALLENGING', 4),
-       (005, 'DIFFICULT', 5);
+VALUES (001, 'EASY', 1, 1000),
+       (002, 'SIMPLE', 2, 2000),
+       (003, 'MODERATE', 3, 3000),
+       (004, 'CHALLENGING', 4, 4000),
+       (005, 'DIFFICULT', 5, 5000),
+       (006, 'NEW', 6, 10000);
 
 UNLOCK
     TABLES;
@@ -152,6 +157,7 @@ CREATE TABLE `stat_count`
     `id`         int         NOT NULL AUTO_INCREMENT,
     `name`       varchar(40) NOT NULL,
     `stat_count` integer     NOT NULL,
+    `base_price` integer     NOT NULL,
     PRIMARY KEY (`id`)
 );
 
@@ -159,12 +165,12 @@ LOCK
     TABLES `stat_count` WRITE;
 
 INSERT INTO `stat_count`
-VALUES (001, '1 STATUS', 1),
-       (002, '2 STATUS', 2),
-       (003, '3 STATUS', 3),
-       (004, '4 STATUS', 4),
-       (005, '5 STATUS', 5),
-       (006, '6 STATUS', 6);
+VALUES (001, '1 STATUS', 1, 1000),
+       (002, '2 STATUS', 2, 2000),
+       (003, '3 STATUS', 3, 3000),
+       (004, '4 STATUS', 4, 4000),
+       (005, '5 STATUS', 5, 5000),
+       (006, '6 STATUS', 6, 6000);
 
 UNLOCK
     TABLES;
@@ -257,3 +263,34 @@ CREATE TABLE `resource`
     `price`    int          NOT NULL,
     PRIMARY KEY (`id`)
 );
+
+DROP TABLE IF EXISTS `player`;
+
+CREATE TABLE `player`
+(
+    `id`         int          NOT NULL AUTO_INCREMENT,
+    `name`       varchar(128) NOT NULL,
+    `ark_id`     varchar(128) NULL,
+    `discord_id` varchar(128) NULL,
+    `balance`    int          NOT NULL,
+    PRIMARY KEY (`id`)
+);
+
+LOCK
+    TABLES `player` WRITE;
+
+INSERT INTO `player`
+VALUES (001, 'curacerto', null, '727664382284267631', 1000000),
+       (002, 'peidofurtiv0', null, '358220072902459395', 240000),
+       (003, 'Dexsee', null, '698527588615847997', 279000),
+       (004, 'GSInvictusBR', null, '234879275101061121', 328000),
+       (005, 'ewans0077', null, '349868811924537349', 0),
+       (006, 'stella', null, '696864511604293702', 250000),
+       (007, 'carbonni', null, '324682607382233102', 0),
+       (008, 'girotti', null, null, 5500),
+       (009, 'sdbraian', null, null, 20000),
+       (010, 'reijunior', null, null, 20000),
+       (011, 'DocSalty', null, null, 400000);
+
+UNLOCK
+    TABLES;
