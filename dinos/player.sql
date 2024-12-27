@@ -1,0 +1,15 @@
+INSERT INTO dinos.player (id, name, ark_id, discord_id, balance) VALUES (1, 'curacerto', '0002f354359348abbcd0d6bd2e2661ce', '727664382284267631', 553000);
+INSERT INTO dinos.player (id, name, ark_id, discord_id, balance) VALUES (2, 'peidofurtiv0', '00026a77b7e440ca8b66bc04bc2188e3', '358220072902459395', 824000);
+INSERT INTO dinos.player (id, name, ark_id, discord_id, balance) VALUES (3, 'Dexsee', '00029369f37c4b3bbc9652da2e69f3c4', '698527588615847997', 313000);
+INSERT INTO dinos.player (id, name, ark_id, discord_id, balance) VALUES (4, 'GSInvictusBR', '000276974c054884b0b54e01376b6f18', '234879275101061121', 373000);
+INSERT INTO dinos.player (id, name, ark_id, discord_id, balance) VALUES (5, 'ewans0077', null, '349868811924537349', 4000);
+INSERT INTO dinos.player (id, name, ark_id, discord_id, balance) VALUES (6, 'stella', '0002bb9d5ffe465d88f81368410fef7e', '696864511604293702', 30000);
+INSERT INTO dinos.player (id, name, ark_id, discord_id, balance) VALUES (7, 'carbonni', null, '324682607382233102', 0);
+INSERT INTO dinos.player (id, name, ark_id, discord_id, balance) VALUES (8, 'girotti', null, null, 5500);
+INSERT INTO dinos.player (id, name, ark_id, discord_id, balance) VALUES (9, 'sdbraian', null, null, 20000);
+INSERT INTO dinos.player (id, name, ark_id, discord_id, balance) VALUES (10, 'reijunior', null, null, 10000);
+INSERT INTO dinos.player (id, name, ark_id, discord_id, balance) VALUES (11, 'DocSalty', null, null, 600000);
+INSERT INTO dinos.player (id, name, ark_id, discord_id, balance) VALUES (12, 'bigbang', '0002948802224b81b3ba766213d599ad', '207286266906017796', 0);
+INSERT INTO dinos.player (id, name, ark_id, discord_id, balance) VALUES (13, 'leo', '0002123a41c24ffd8a321ce1afc24c92', '482295642434043964', 50000);
+INSERT INTO dinos.player (id, name, ark_id, discord_id, balance) VALUES (14, 'seninha', '0002b8d23ee5458eb58d4e9a2a594591', '569353020240953357', 23000);
+INSERT INTO dinos.player (id, name, ark_id, discord_id, balance) VALUES (15, 'dags2656', '0002ee706fa24be0867533ff422b413a', '393615123446497281', 2000);
