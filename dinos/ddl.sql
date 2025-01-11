@@ -37,12 +37,14 @@ create table dinos.player
 
 create table dinos.resource
 (
-    id       int auto_increment
+    id          int auto_increment
         primary key,
-    name     varchar(128) not null,
-    icon     varchar(256) not null,
-    quantity int          not null,
-    price    int          not null
+    name        varchar(128) not null,
+    icon        varchar(256) not null,
+    quantity    int          not null,
+    price       int          not null,
+    msg_id      varchar(256) null,
+    resource_id varchar(256) null
 );
 
 create table dinos.stat_category
@@ -87,11 +89,12 @@ create table dinos.dino_range_count
 
 create table dinos.transfer
 (
-    id        int auto_increment
+    id         int auto_increment
         primary key,
-    source_id int not null,
-    target_id int not null,
-    amount    int not null,
+    source_id  int                                   not null,
+    target_id  int                                   not null,
+    amount     int                                   not null,
+    created_at TIMESTAMP ON UPDATE CURRENT_TIMESTAMP NOT NULL DEFAULT CURRENT_TIMESTAMP,
     constraint fk_transfer_source_id
         foreign key (source_id) references dinos.player (id),
     constraint fk_transfer_target_id

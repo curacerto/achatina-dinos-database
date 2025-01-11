@@ -50,4 +50,16 @@ INSERT INTO dinos.dinosaur (id, name, stat_category_id) VALUES (49, 'MANTIS', 3)
 INSERT INTO dinos.dinosaur (id, name, stat_category_id) VALUES (50, 'BARYONIX', 2);
 INSERT INTO dinos.dinosaur (id, name, stat_category_id) VALUES (51, 'SHASTASAURUS', 5);
 INSERT INTO dinos.dinosaur (id, name, stat_category_id) VALUES (52, 'CERATOSAURUS', 4);
-INSERT INTO dinos.dinosaur (id, name, stat_category_id) VALUES (53, 'DREADMERE', 6);
+INSERT INTO dinos.dinosaur (id, name, stat_category_id) VALUES (53, 'DREADMERE', 5);
+
+INSERT INTO dinos.dinosaur (id, name, stat_category_id) VALUES (54, 'ARMADOGGO', 2);
+INSERT INTO dinos.dinosaur (id, name, stat_category_id) VALUES (55, 'DAEODON', 2);
+INSERT INTO dinos.dinosaur (id, name, stat_category_id) VALUES (56, 'DRACOMORPH', 2);
+INSERT INTO dinos.dinosaur (id, name, stat_category_id) VALUES (57, 'DREADNOUGHTUS', 5);
+INSERT INTO dinos.dinosaur (id, name, stat_category_id) VALUES (58, 'GACHA', 1);
+INSERT INTO dinos.dinosaur (id, name, stat_category_id) VALUES (59, 'GIGA_TEK', 10);
+INSERT INTO dinos.dinosaur (id, name, stat_category_id) VALUES (60, 'MANAGARMR', 3);
+INSERT INTO dinos.dinosaur (id, name, stat_category_id) VALUES (61, 'ROCK_GOLEM', 5);
+INSERT INTO dinos.dinosaur (id, name, stat_category_id) VALUES (62, 'SNOW_OWL', 2);
+INSERT INTO dinos.dinosaur (id, name, stat_category_id) VALUES (63, 'VELONASAUR', 3);
+INSERT INTO dinos.dinosaur (id, name, stat_category_id) VALUES (64, 'PHOENIX', 5);
