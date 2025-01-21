@@ -1,0 +1,1 @@
+INSERT INTO dinos.player_soul (id, player_id, soul, terminal) VALUES (1, 1, 20, 1);

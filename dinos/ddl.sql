@@ -107,6 +107,7 @@ create table dinos.order
         primary key,
     player_id   int                                   not null,
     resource_id int                                   not null,
+    kit_id      int                                   not null,
     amount      int                                   not null,
     price       int                                   not null,
     total       int                                   not null,
@@ -116,5 +117,47 @@ create table dinos.order
     constraint fk_order_player_id
         foreign key (player_id) references dinos.player (id),
     constraint fk_order_resource_id
-        foreign key (resource_id) references dinos.resource (id)
+        foreign key (resource_id) references dinos.resource (id),
+    constraint fk_order_kit_id
+        foreign key (kit_id) references dinos.kit (id)
+);
+
+create table dinos.admin
+(
+    id           int auto_increment
+        primary key,
+    admin_msg_id varchar(256) null,
+    soul_msg_id  varchar(256) null,
+    admin_id     varchar(100) not null
+);
+
+create table dinos.player_soul
+(
+    id        int auto_increment
+        primary key,
+    player_id int not null,
+    soul      int not null,
+    terminal  int not null,
+    constraint fk_player_soul_player_id
+        foreign key (player_id) references dinos.player (id)
+);
+
+create table dinos.kit
+(
+    id    int auto_increment
+        primary key,
+    name  varchar(100) not null,
+    price int          not null
+);
+
+create table dinos.kit_item
+(
+    id        int auto_increment
+        primary key,
+    name      varchar(100) not null,
+    blueprint varchar(256) not null,
+    quantity  int          not null,
+    kit_id    int          not null,
+    constraint fk_kit_item_kit_id
+        foreign key (kit_id) references dinos.kit (id)
 );
