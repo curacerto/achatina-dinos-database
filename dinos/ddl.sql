@@ -105,15 +105,16 @@ create table dinos.order
 (
     id          int auto_increment
         primary key,
-    player_id   int                                   not null,
-    resource_id int                                   not null,
-    kit_id      int                                   not null,
-    amount      int                                   not null,
-    price       int                                   not null,
-    total       int                                   not null,
-    map         varchar(100)                          null,
-    status      varchar(100)                          null,
-    created_at  TIMESTAMP ON UPDATE CURRENT_TIMESTAMP NOT NULL DEFAULT CURRENT_TIMESTAMP,
+    player_id   int          not null,
+    resource_id int          not null,
+    kit_id      int          null,
+    msg_id      varchar(256) null,
+    amount      int          not null,
+    price       int          not null,
+    total       int          not null,
+    map         varchar(100) null,
+    status      varchar(100) null,
+    created_at  TIMESTAMP    NOT NULL DEFAULT CURRENT_TIMESTAMP,
     constraint fk_order_player_id
         foreign key (player_id) references dinos.player (id),
     constraint fk_order_resource_id
