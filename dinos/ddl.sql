@@ -44,7 +44,8 @@ create table dinos.resource
     quantity    int          not null,
     price       int          not null,
     msg_id      varchar(256) null,
-    resource_id varchar(256) null
+    resource_id varchar(256) null,
+    blueprint   varchar(256) null
 );
 
 create table dinos.stat_category
@@ -89,12 +90,13 @@ create table dinos.dino_range_count
 
 create table dinos.transfer
 (
-    id         int auto_increment
+    id            int auto_increment
         primary key,
-    source_id  int                                   not null,
-    target_id  int                                   not null,
-    amount     int                                   not null,
-    created_at TIMESTAMP ON UPDATE CURRENT_TIMESTAMP NOT NULL DEFAULT CURRENT_TIMESTAMP,
+    source_id     int          not null,
+    target_id     int          not null,
+    amount        int          not null,
+    transfer_type varchar(100) not null,
+    created_at    TIMESTAMP    NOT NULL DEFAULT CURRENT_TIMESTAMP,
     constraint fk_transfer_source_id
         foreign key (source_id) references dinos.player (id),
     constraint fk_transfer_target_id
@@ -116,11 +118,7 @@ create table dinos.order
     status      varchar(100) null,
     created_at  TIMESTAMP    NOT NULL DEFAULT CURRENT_TIMESTAMP,
     constraint fk_order_player_id
-        foreign key (player_id) references dinos.player (id),
-    constraint fk_order_resource_id
-        foreign key (resource_id) references dinos.resource (id),
-    constraint fk_order_kit_id
-        foreign key (kit_id) references dinos.kit (id)
+        foreign key (player_id) references dinos.player (id)
 );
 
 create table dinos.admin
