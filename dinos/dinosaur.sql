@@ -1,4 +1,4 @@
-INSERT INTO dinos.dinosaur (id, name, stat_category_id) VALUES (1, 'T_REX', 3);
+INSERT INTO dinos.dinosaur (id, name, stat_category_id, icon, blueprint) VALUES (1, 'T_REX', 3, 'https://ark.wiki.gg/images/thumb/5/5f/Rex.png/43px-Rex.png', 'Blueprint''/Game/PrimalEarth/Dinos/Rex/Rex_Character_BP.Rex_Character_BP''');
 INSERT INTO dinos.dinosaur (id, name, stat_category_id) VALUES (2, 'GIGANOTOSAURUS', 5);
 INSERT INTO dinos.dinosaur (id, name, stat_category_id) VALUES (3, 'CARCHARODONTOSAURUS', 5);
 INSERT INTO dinos.dinosaur (id, name, stat_category_id) VALUES (4, 'DEINOSUCHUS', 3);

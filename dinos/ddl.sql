@@ -9,8 +9,9 @@ create table dinos.dinosaur
 (
     id               int auto_increment
         primary key,
-    name             varchar(40) not null,
-    stat_category_id int         not null
+    name             varchar(40)  not null,
+    stat_category_id int          not null,
+    icon             varchar(256) null
 );
 
 create table dinos.dinosaur_category
